@@ -134,6 +134,7 @@ function BookingManagementPage() {
     const statusMap = {
       PCON: "Pending Confirmation",
       ACON: "Confirmed",
+      PCAN: "Pending Cancellation",
       ACAN: "Cancelled",
       PAMM: "Pending Amendment",
       AAMM: "Amendment Approved",
@@ -354,6 +355,8 @@ function BookingManagementPage() {
                             ? "bg-cyan-100 text-cyan-800"
                             : booking.status === "ACON"
                             ? "bg-green-100 text-green-800"
+                            : booking.status === "PCAN"
+                            ? "bg-orange-100 text-orange-800"
                             : booking.status === "ACAN"
                             ? "bg-red-100 text-red-800"
                             : booking.status === "PAMM"
